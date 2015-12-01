@@ -21,6 +21,7 @@ class Admin::PostTypesController < Admin::BaseController
 
   def new_or_edit
     @post_types = PostType.find(:all)
+    # Assistance from Renn Jervis
     @post_type = case params[:id]
                 when nil
                   PostType.new
